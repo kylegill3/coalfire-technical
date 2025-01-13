@@ -213,3 +213,4 @@ terraform apply -var-file="../_configs/prod.tfvars"
 # Challenge
 - Decided early on to use Coalfire modules for all resources needing created
    - Saw all the storage accounts the coalfire modules created and decided I wouldn't create one as the challenge asked for that had both "terraformstate" and "weblogs" as these already appeared to be created. So I used the ones the base modules created.
+   - In order to make the storage account accessible only to the mgmt server, a private endpoint would need to be created and used on the storage account. The public access would need to be turned off for the storage account as well. I did not perform these steps in code because it would have turned off my ability to develop the solution from my laptop.
